@@ -470,7 +470,7 @@ public static char leerCaracter(String mensaje) {
         String cadena;
         boolean resultado = false;
         boolean bandera = false;
-
+        System.out.println("Introduce un valor booleano (SI, si, Si, NO, no y No): ");
         Scanner teclado = new Scanner(System.in);
 
         do {
@@ -487,7 +487,7 @@ public static char leerCaracter(String mensaje) {
                     resultado = false;
                     bandera = true;
                 } else {
-                    System.out.println("No ha introducido un valor correcto, introduce un número por favor: ");
+                    System.out.println("No ha introducido un valor correcto, introduce el valor correcto: ");
                 }
 
             }
@@ -520,13 +520,13 @@ public static char leerCaracter(String mensaje) {
 
             cadena = teclado.nextLine();
 
-            if (cadena.matches("si")) {
+            if (cadena.matches("SI|si|Si")) {
 
                 resultado = true;
                 bandera = true;
 
             } else {
-                if (cadena.matches("no")) {
+                if (cadena.matches("NO|no|No")) {
                     resultado = false;
                     bandera = true;
                    
